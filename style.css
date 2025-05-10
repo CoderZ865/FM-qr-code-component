@@ -1,0 +1,129 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+
+    --Slate-300: hsl(212, 45%, 89%);
+    --Slate-500: hsl(216, 15%, 48%);
+    --Slate-900: hsl(218, 44%, 22%);
+
+    --fs-15: calc(15/16 * 1rem);
+    --fs-22: calc(22/16 * 1rem);
+
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --ls-120: 1.2;
+    --ls-140: 1.4;
+
+    --spacing-500: 40px;
+    --spacing-300: 24px;
+    --spacing-200: 16px;  
+
+    --color-bg-light: var(--Slate-300);
+    --color-text-dark: var(--Slate-900);
+    --color-bg-white: var(--white);
+
+    --card-heading-size: var(--fs-22);
+    --card-heading-line-height: var(--ls-120);
+    --card-heading-weight: var(--fw-700);
+
+    --card-paragraph-weight: var(--fw-400);
+    --card-paragraph-line-height: var(--ls-140);
+    --card-paragraph-size: var(--fs-15);
+
+    --card-background-color: var(--color-bg-white);
+
+    --card-border-radius: 20px;
+
+    --img-border-radius: 10px;
+    --img-width: 288px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* outfit-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/outfit-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* outfit-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/outfit-v11-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+body {
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit';
+    color: var(--color-text-dark);
+    background: var(--color-bg-light);
+    font-size: var(--fs-15);
+    text-align: center;
+    height: 100vh;
+    gap: 0;
+}
+
+.card {
+    display: grid;
+    width: calc(var(--img-width) + var(--spacing-200)* 2);
+    gap: var(--spacing-300);
+    padding: var(--spacing-200);
+    padding-bottom: var(--spacing-500);
+    border-radius: var(--card-border-radius);
+    background: var(--card-background-color);
+    font-size: var(--card-paragraph-size);
+}
+
+.card h1 {
+    font-size: var(--card-heading-size);
+    line-height: var(--card-heading-line-height);
+    font-weight: var(--card-heading-weight);
+}
+
+img {
+    width: var(--img-width);
+    border-radius: var(--img-border-radius);
+}
+
+.text-group {
+    display: grid;
+    gap: var(--spacing-200);
+    padding-inline: var(--spacing-200);
+}
+
+.attribution {
+    padding: var(--spacing-200);
+    height: auto;
+}
