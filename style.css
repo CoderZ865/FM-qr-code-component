@@ -19,7 +19,8 @@
     --spacing-200: 16px;  
 
     --color-bg-light: var(--Slate-300);
-    --color-text-dark: var(--Slate-900);
+    --color-pg-dark: var(--Slate-500);
+    --color-heading-dark: var(--Slate-900);
     --color-bg-white: var(--white);
 
     --card-heading-size: var(--fs-22);
@@ -104,12 +105,14 @@ body {
     border-radius: var(--card-border-radius);
     background: var(--card-background-color);
     font-size: var(--card-paragraph-size);
+    color: var(--color-pg-dark);
 }
 
 .card h1 {
     font-size: var(--card-heading-size);
     line-height: var(--card-heading-line-height);
     font-weight: var(--card-heading-weight);
+    color: var(--color-heading-dark);
 }
 
 img {
